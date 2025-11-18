@@ -1,0 +1,41 @@
+[package]
+name = "infobooks-rs"
+version = "0.1.0"
+edition = "2021"
+
+# Descrição opcional
+authors = ["Lenitha Borges da Silva"]
+description = "Aplicação Rust para gerenciamento de empréstimos e cadastro de livros (InfoBooks RS)."
+
+[dependencies]
+# Framework web
+actix-web = "4"
+
+# Serialização e desserialização (JSON)
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Datas e horários
+chrono = { version = "0.4", features = ["serde"] }
+
+# Identificadores únicos (com suporte a serde)
+uuid = { version = "1", features = ["serde", "v4"] }
+
+# Sincronização e compartilhamento de estado
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+
+# Log e mensagens de debug
+env_logger = "0.11"
+log = "0.4"
+
+# (Opcional) Caso use templates ou leitura de arquivos futuramente
+askama = "0.12"
+
+# (Opcional) Caso queira trabalhar com arquivos
+fs_extra = "1.3"
+
+# (Opcional) Para simplificar erros
+thiserror = "1.0"
+actix-files = "0.6.8"
+tera = "1.20.1"
+parking_lot = "0.12.5"
